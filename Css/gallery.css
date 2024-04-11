@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+.container h2 {
+    color: gold;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    gap: 50px; /* Adjust space between cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.card {
+    flex: 0 0 auto;
+    width: calc(33.33% - 20px); /* Adjust card width for smaller screens */
+    max-width: 200px; /* Set maximum width for cards */
+    height: 200px; /* Adjust card height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(251, 250, 250); /* Adjust shadow color and opacity */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Add translation on hover */
+    background-color: grey;
+    color: rgb(255, 255, 255);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .card-container {
+        justify-content: space-around; /* Adjust alignment for smaller screens */
+    }
+
+    .card {
+        width: calc(50% - 20px); /* Adjust card width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* Adjust card width for smaller screens */
+    }
+}
