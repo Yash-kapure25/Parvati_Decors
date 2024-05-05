@@ -7,27 +7,32 @@
     <link rel="stylesheet" href="./css/about.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: gold;
-  }
-  .heading{
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+.heading {
   font-size: 3.5rem;
-    color: gold;
-    font-weight: 500;
-    text-align: center;
-    font-family:Old English Text MT;
-  }
-  .heading span{
-    color: white;
-    font-family: Old English Text MT;
-  }
+  color: gold;
+  font-weight: 500;
+  text-align: center;
+  font-family: Old English Text MT;
+}
+
+.heading span {
+  color: white;
+  font-family: Old English Text MT;
+}
+
 .about {
   background: rgb(0, 0, 0);
+  padding: 20px;
 }
+
 .about .row {
   display: flex;
   flex-direction: row;
@@ -35,27 +40,32 @@
   flex-wrap: wrap;
   padding: 10rem;
 }
+
 .about .row .image {
   text-align: center;
   flex: 1 1 35rem;
 }
+
 .about .row .image img {
   margin: 4rem;
-    width: 25rem;
-    height: 30rem;
-    border-radius: 20%;
-    box-shadow: -1px 2px 20px 20px rgba(250, 250, 250, 0.674);
-    mix-blend-mode: luminosity;
-    transition: 0.3s;
-    cursor: pointer;
+  width: 25rem;
+  height: 30rem;
+  border-radius: 20%;
+  box-shadow: -1px 2px 20px 20px rgba(250, 250, 250, 0.674);
+  mix-blend-mode: luminosity;
+  transition: 0.3s;
+  cursor: pointer;
 }
+
 .about .row .image img:hover {
   mix-blend-mode: normal;
 }
+
 .about .row .content {
   flex: 1 1 45rem;
   padding: 3rem;
 }
+
 .about .row .content h3 {
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
@@ -70,6 +80,7 @@
   text-transform: none;
   text-align: justify;
 }
+
 .about .row .content .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,25 +88,59 @@
   font-family: "Nunito";
   font-weight: 600;
 }
+
 .about .row .content .box-container .box p {
   text-transform: none;
 }
+
 .about .row .content .box-container .box p span {
   color: goldenrod;
 }
-.content {
-  padding: 20px;
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .about .row {
+    padding: 5rem;
+  }
 }
 
-.team-description {
-  margin-bottom: 20px;
+@media screen and (max-width: 992px) {
+  .about .row {
+    padding: 3rem;
+  }
 }
 
-.role-image-container p {
-  margin: 0;
-  line-height: 1.5;
+@media screen and (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .row .image {
+    flex: 1 1 auto;
+  }
+
+  .about .row .content {
+    flex: 1 1 auto;
+    padding: 2rem;
+  }
+
+  .about .row .image img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
 }
 
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .about .row {
+    padding: 2rem;
+  }
+}
 </style>
 </head>
 <body>
