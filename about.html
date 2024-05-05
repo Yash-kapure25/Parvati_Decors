@@ -14,110 +14,143 @@
     background-color: black;
     color: gold;
   }
-  
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+  .heading{
+  font-size: 3.5rem;
+    color: gold;
+    font-weight: 500;
     text-align: center;
+    font-family:Old English Text MT;
   }
-  
-  .proprietor {
-    text-align: left;
-    margin-bottom: 30px;
+  .heading span{
+    color: white;
+    font-family: Old English Text MT;
   }
-  
-  .proprietor img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  .banner {
-    padding: 10px;
-    width: 100%;
-    max-height: 200px; /* Adjust the height as needed */
-    overflow: hidden;
-    margin-bottom: -20px;
-  }
-  
-  .banner img {
-    width: 700%;
-    height: 1000%;
-    /* height: auto; */
-  }
-  .team-member {
-    display: inline-block;
-    width: 150px;
-    margin: 10px;
-    vertical-align: top;
-  }
-  
-  .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .team-member .info {
-    background-color: rgb(126, 126, 126);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-  }
+.about {
+  background: rgb(0, 0, 0);
+}
+.about .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 10rem;
+}
+.about .row .image {
+  text-align: center;
+  flex: 1 1 35rem;
+}
+.about .row .image img {
+  margin: 4rem;
+    width: 25rem;
+    height: 30rem;
+    border-radius: 20%;
+    box-shadow: -1px 2px 20px 20px rgba(250, 250, 250, 0.674);
+    mix-blend-mode: luminosity;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.about .row .image img:hover {
+  mix-blend-mode: normal;
+}
+.about .row .content {
+  flex: 1 1 45rem;
+  padding: 3rem;
+}
+.about .row .content h3 {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about .row .content p {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 600;
+  text-transform: none;
+  text-align: justify;
+}
+.about .row .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 600;
+}
+.about .row .content .box-container .box p {
+  text-transform: none;
+}
+.about .row .content .box-container .box p span {
+  color: goldenrod;
+}
+.content {
+  padding: 20px;
+}
+
+.team-description {
+  margin-bottom: 20px;
+}
+
+.role-image-container p {
+  margin: 0;
+  line-height: 1.5;
+}
+
 </style>
 </head>
 <body>
-  <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis odit saepe veniam necessitatibus nihil atque dolorem hic, deleniti voluptates corrupti ratione neque voluptatem ipsum debitis magni expedita, commodi illo fuga, totam reiciendis. Perferendis, sint dicta praesentium totam iusto dolores reprehenderit reiciendis asperiores, sit voluptatem voluptatibus nesciunt officiis veritatis aut. Et, sint illo. Consectetur vel nulla maxime dolore laborum exercitationem? Quasi neque nobis iure et nemo ducimus nostrum beatae, a tempora ullam, exercitationem minima, doloremque perferendis repellendus iusto. Temporibus quidem aliquam quam. Doloribus aspernatur explicabo atque? Fugit repellendus beatae dignissimos nisi error. Reiciendis qui, totam natus voluptatum eos sunt quas tempora!</h2>
-<div class="container">
-  <div class="proprietor">
-    <img src="./img/model-3.jpg" alt="Proprietor Photo">
-    <h2>Bhoir Diksha</h2>
-    <p>Proprietor</p>
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+    <div class="row">
+
+      <div class="image">
+        <img draggable="false" class="tilt" src="./img/model-3.jpg" alt="">
+      </div>
+      <div class="content">
+        <h3>I'm Diksha Bhoir</h3>
+        <p>In 2023, amidst the vibrant landscape of burgeoning opportunities, we embarked on an exhilarating entrepreneurial journey, driven by our unwavering determination and fueled by boundless passion. It marked the inception of our vision, the genesis of our aspirations, as we ventured into the realm of transforming ideas into tangible realities.
+          The decision to establish our business stemmed from a deep-seated desire to create something meaningful, something that would resonate with our values and resonate with our customers. It was a leap of faith, a bold step into the unknown, propelled by the belief that we could not only meet but surpass the expectations of our discerning clientele.
+          From the outset, our focus was clear: to build a business that thrived on innovation, integrity, and excellence in every endeavor. We poured our hearts and souls into crafting a brand that stood for quality, reliability, and customer satisfaction above all else.
+          With each passing day, we embraced challenges as opportunities for growth, learning, and evolution. Every setback was met with resilience, every obstacle a chance to demonstrate our unwavering commitment to success. Through dedication and perseverance, we navigated the intricate pathways of entrepreneurship, charting our course amidst the ever-changing currents of the market.
+          As the months unfolded, we witnessed the fruits of our labor blossom into tangible results. We served our first customers with pride, delivering products and services that not only met their needs but exceeded their expectations. Their satisfaction became our driving force, inspiring us to continually raise the bar and set new standards of excellence.</p>
+        <div class="box-container">
+          <div class="box">
+            <p><span> Email : </span> dikshabhoir1507@gmail.com</p>
+            <p><span> Place : </span> Kevni -Dive, Bhiwandi, Mh, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- Team Members -->
+ <section class="about" id="about">
+  <h2 class="heading"><i class="fas fa-user-alt"></i> Team <span>Members</span></h2>
+
+  <div class="row">
+
+    <div class="image">
+      <img draggable="false" class="tilt" src="./img/model-4.JPG" alt="">
+    </div>
+    <div class="content">
+      <h3>We're Team Parvati Decors</h3>
+      <p>
+        1.Project Manager: Responsible for overseeing the entire project from inception to completion. They coordinated team efforts, set deadlines, allocated resources, and ensured that the project stayed on track. Additionally, they liaised with stakeholders and facilitated communication between team members.
+        <br>
+        2.Research Team: This group conducted extensive research on the interior design industry, market trends, customer preferences, competitor analysis, and relevant regulations. They gathered valuable insights to inform the project's direction and decision-making process.
+        <br>
+        3.Designers: Played a crucial role in conceptualizing and creating the decor themes, layouts, color schemes, and overall aesthetics for Parvati Decors. They utilized their creativity and expertise to design visually appealing and functional spaces tailored to clients' needs and preferences.
+        <br>
+        4.Developers/Technicians: Responsible for implementing the technical aspects of the project, such as developing the software or digital tools required for design visualization, managing inventory, client communication platforms, or any other technological components integral to Parvati Decors' operations.
+        <br>
+        5.Content Creators: Produced written content for various purposes, including website copy, marketing materials, social media posts, and client communications. They crafted compelling narratives to showcase Parvati Decors' services, expertise, and unique selling points effectively.
+        <br>
+        6.Documentation Team: Created comprehensive documentation detailing the project's objectives, methodologies, findings, and outcomes. This documentation served as a reference for team members, stakeholders, and future endeavors related to Parvati Decors.
+        <br>
+        7.Presentation Team: Prepared and delivered engaging presentations to panel members, investors, or other stakeholders. They effectively communicated the project's goals, strategies, achievements.
+      </p>
+    </div>
   </div>
-  
-  <div class="banner">
-    <img src="./img/banner.2.jpg" alt="Banner Image" style="width: 100%;">
-  </div>
-  
-  <h2>Our Team</h2>
-  <div class="team">
-    <div class="team-member">
-      <img src="/img/model-4.jpg" alt="Team Member 1">
-      <div class="info">
-        <h3>Yash Kapure </h3>
-        <p>Developer</p>
-        <p>Email: ypkapure74@gmail.com</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <img src="./img/model-1.jpg" alt="Team Member 2">
-      <div class="info">
-        <h3>Mansi Jadhav</h3>
-        <p>Designer</p>
-        <!-- <p>Peon Kaki</p> -->
-        <p>Email: mjadhav@gmail.com</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <img src="./img/model-3.jpg" alt="Team Member 2">
-      <div class="info">
-        <h3>Diksha Bhoir</h3>
-        <p>Research Analyst</p>
-        <p>Email: dbhoir@gmail.com</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <img src="./img/model-5.jpg" alt="Team Member 2">
-      <div class="info">
-        <h3>Yash Dethe</h3>
-        <p>Graphic Designer</p>
-        <p>Email: ydethe@gmail.com</p>
-      </div>
-    </div>
-    <!-- Add more team members as needed -->
-  </div>
-</div>
+</section>
 </body>
 </html>
