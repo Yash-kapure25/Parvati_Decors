@@ -1,7 +1,4 @@
-To make your website responsive for various devices, including laptops, desktops, mobile phones, and tablets (including iPad), you can use media queries in your CSS. Here's how you can modify your CSS to make it responsive:
 
-```css
-/* Common styles for all devices */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
