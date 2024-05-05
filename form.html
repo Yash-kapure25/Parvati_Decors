@@ -117,28 +117,24 @@
           <label for="query">Any Query:</label>
           <textarea id="query" name="query" rows="3" required></textarea>
         </div>
-        <button type="button" id="submitBtn">Submit</button>
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </div>
-  <!-- <form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
-</form> -->
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbysLOIjxxTQGu8qz0l0ptCc686B3jLYLqWmTmtdRaXDqOI1LkunUvbmTga3Du5yjarVpQ/exec';
-  const form = document.getElementById('eventForm');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault(); // Prevent default form submission
-    const formData = new FormData(form);
-    fetch(scriptURL, { method: 'POST', body: formData })
-      .then(response => {
-        console.log('Success!', response);
-        // You can optionally redirect the user to a thank you page here
+    <!-- <form name="submit-to-google-sheet">
+      <input name="email" type="email" placeholder="Email" required>
+      <button type="submit">Send</button>
+    </form> -->
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxqfbFt0QRWqy8TEudZFuS9KQ6J4uzD1MZaxr9fLnzzCMF2e0P3QtOTph-VkD_ihf-f/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
       })
-      .catch(error => console.error('Error!', error.message));
-  });
-</script>
-
+    </script>
   </body>
 </html>
