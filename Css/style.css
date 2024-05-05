@@ -1,26 +1,23 @@
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: black;
-  color: gold;
 }
 
-/* Navbar styles */
 .navbar {
   overflow: hidden;
   background-color: black;
-  padding: 10px 20px;
 }
 
 .navbar .logo {
   display: block;
   float: left;
+  padding: 10px 10px;
+  /* Adjust logo dimensions */
 }
 
 .navbar .logo img {
-  height: 40px;
+  height: 40px; /* Adjust the height as needed */
 }
 
 .navbar a {
@@ -35,31 +32,32 @@ body {
 
 .navbar a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  color: gold;
 }
 
 .navbar a.active {
   background-color: rgba(255, 255, 255, 0.1);
+  color: gold;
 }
 
 .navbar .login-signup {
   float: right;
 }
 
-/* Banner styles */
 .banner {
   background-image: url("/img/banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 200px; /* Adjust the height of the banner as needed */
   color: gold;
   text-align: center;
-  line-height: 200px;
+  line-height: 200px; /* Center text vertically */
 }
 
-/* About Us section styles */
 .about-us {
   padding: 20px;
   text-align: center;
+  color: gold;
 }
 
 .about-card {
@@ -71,7 +69,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px;
 }
 
 .about-img {
@@ -102,25 +99,58 @@ body {
   color: gold;
 }
 
-/* Gallery section styles */
+button#moreInfoBtn {
+  background-color: black;
+  color: gold;
+  padding: 10px 20px;
+  border: solid;
+  text-align: center;
+  border-color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#moreInfoBtn:hover {
+  background-color: #333;
+}
+
+/* Gallery section */
 .gallery-container {
   overflow: hidden;
-  margin: 20px;
+}
+
+.gallery {
+  display: flex;
+  animation: slide 10s infinite linear; /* Adjust slide duration as needed */
+}
+
+.gallery img {
+  width: 200%;
+  height: 600px; /* Adjust image height as needed */
+  object-fit: cover;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px; /* Adjust the gap between cards */
 }
 
 .gallery-card {
+  position: relative; /* Added for stacking effect */
   width: 300px;
+  height: 350px; /* Adjust card width as needed */
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+  overflow: hidden; /* Added for overlay effect */
+  transition: transform 0.3s ease; /* Added for hover effect */
 }
 
 .gallery-card img {
@@ -130,23 +160,75 @@ body {
 }
 
 .gallery-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Adjust translateY value for desired hover effect */
   background-color: whitesmoke;
 }
 
-/* Testimonials section styles */
+.gallery-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust overlay color and opacity */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 0.3s ease; /* Added for fade-in effect */
+}
+
+.gallery-card:hover::before {
+  opacity: 1; /* Fade in the overlay on hover */
+}
+
+.gallery-card:hover .overlay-content {
+  opacity: 1; /* Show overlay content on hover */
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #ffffff;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Added for fade-in effect */
+}
+
+.view-more {
+  display: block;
+  width: 200px; /* Adjust button width as needed */
+  padding: 10px 20px;
+  background-color: black;
+  color: gold;
+  text-align: center;
+  text-decoration: none;
+  border: solid;
+  border-color: whitesmoke;
+  border-radius: 5px;
+  margin: 20px auto; /* Center the button */
+}
+
+.view-more:hover {
+  background-color: #333;
+}
+/*Testimonials */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .testimonials-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background-color: #000000;
-  padding: 20px;
 }
 
 .testimonials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .testimonial {
@@ -154,14 +236,19 @@ body {
   background-color: rgba(35, 32, 32, 0.46);
   color: gold;
   border-radius: 8px;
+  margin: 0 10px;
   overflow: hidden;
   transition: background-color 0.3s ease;
 }
 
 .testimonial:hover {
-  background-color: #6c6c6c42;
+  background-color: #fefefe;
 }
 
+.testimonial:hover {
+  background-color: #6c6c6c42;
+  color: #ccc; /* Change text color on hover */
+}
 .testimonial-content {
   padding: 20px;
 }
@@ -188,16 +275,17 @@ body {
 .testimonial-text p {
   margin: 0;
 }
-
-/* Footer styles */
+/* Footer */
 .footer {
   background-color: black;
   color: gold;
   padding: 20px 0;
-  text-align: center;
 }
 
 .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -207,14 +295,24 @@ body {
   align-items: center;
 }
 
+.logo img {
+  width: 50px; /* Adjust logo size as needed */
+}
+
+.company-info {
+  margin-left: 10px;
+}
+
 .footer-right {
   display: flex;
   align-items: center;
-
-
 }
 
-.social-media {
+.follow-us {
+  margin-right: 20px;
+}
+
+ .social-media {
   display: flex;
   background-color: white;
 }
@@ -223,6 +321,10 @@ body {
   color: gold;
   font-size: 20px;
   margin-right: 10px;
+}
+.footer-menu {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .footer-menu ul {
@@ -249,13 +351,6 @@ body {
   margin-top: 20px;
 }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .navbar .logo img {
-    height: 30px;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .navbar .logo img {
     height: 25px;
@@ -274,6 +369,6 @@ body {
     width: calc(50% - 20px);
   }
   .testimonial {
-    width: calc(50% - 20px);
+    width: calc(50% - 50px);
   }
 }
