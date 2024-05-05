@@ -213,3 +213,70 @@ body {
 .footer-right {
   display: flex;
   align-items: center;
+
+
+}
+
+.social-media {
+  display: flex;
+  background-color: white;
+}
+
+.social-icon {
+  color: gold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-menu ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-menu ul li a {
+  color: gold;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar .logo img {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .logo img {
+    height: 25px;
+  }
+  .navbar a {
+    padding: 10px 15px;
+  }
+  .banner {
+    height: 150px;
+    line-height: 150px;
+  }
+  .about-card {
+    margin: 10px;
+  }
+  .gallery-card {
+    width: calc(50% - 20px);
+  }
+  .testimonial {
+    width: calc(50% - 20px);
+  }
+}
